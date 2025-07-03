@@ -1,0 +1,10 @@
+# VScode
+.vscode/
+
+# CPP
+
+## `make clean` should catch these, 
+# but if not run I don't want them to commit
+*.o 
+build/
+dist/
