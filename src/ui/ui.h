@@ -4,9 +4,8 @@
 #include <iostream>
 #include <string>
 
-class UI
-{
-public:
+class UI {
+   public:
     UI();
 
     void run(std::string state);

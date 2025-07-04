@@ -5,17 +5,16 @@
 #include <string>
 #include <vector>
 
-class Player
-{
-private:
+class Player {
+   private:
     std::string name;
 
     double cash;
-    std::map<std::string, int> portfolio; // this will be Stock* => int
-    std::vector<std::string> activeLoans; // this will be Loan
+    std::map<std::string, int> portfolio;  // this will be Stock* => int
+    std::vector<std::string> activeLoans;  // this will be Loan
     int consecutiveDrawdownQuarters;
 
-public:
+   public:
     Player(std::string name, double starting_cash);
 
     std::string getName() const;

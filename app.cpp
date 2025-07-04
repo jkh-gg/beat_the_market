@@ -1,6 +1,6 @@
+#include <chrono>
 #include <iostream>
-#include <random>  
-#include <chrono>  
+#include <random>
 
 #include "ui/ui.h"
 
@@ -17,5 +17,5 @@ int main() {
     UI gui;
     gui.run("state");
 
-  return 0;
+    return 0;
 }

@@ -2,7 +2,7 @@
 #include "../dependencies/doctest/doctest.h"
 
 // Include the header for the code you want to test
-#include "src/math.h" // Make sure this path is correct relative to your test file
+#include "src/math.h"  // Make sure this path is correct relative to your test file
 
 TEST_CASE("My first test") {
     CHECK(1 + 1 == 2);
