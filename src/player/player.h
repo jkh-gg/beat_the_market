@@ -18,9 +18,9 @@ class Player {
     Player(std::string name, double starting_cash);
 
     std::string getName() const;
-    std::string getCash() const;
-    std::string getPortfolio() const;
-    std::string getLoans() const;
+    double getCash() const;
+    std::map<std::string, int> getPortfolio() const;
+    std::vector<std::string> getLoans() const;
 };
 
 #endif
