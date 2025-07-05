@@ -9,4 +9,4 @@ double Player::getCash() const { return cash; }
 
 std::map<Security, int> Player::getPortfolio() const { return portfolio; }
 
-std::vector<std::string> Player::getLoans() const { return activeLoans; }
+std::vector<Loan> Player::getLoans() const { return activeLoans; }

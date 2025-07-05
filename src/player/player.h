@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 
+#include "loan/loan.h"
 #include "security/security.h"
 
 class Player {
@@ -13,7 +14,7 @@ class Player {
 
     double cash;
     std::map<Security, int> portfolio;
-    std::vector<std::string> activeLoans;  // TODO - this will be Loan
+    std::vector<Loan> activeLoans;
     int consecutiveDrawdownQuarters;
 
    public:
@@ -22,7 +23,7 @@ class Player {
     std::string getName() const;
     double getCash() const;
     std::map<Security, int> getPortfolio() const;
-    std::vector<std::string> getLoans() const;
+    std::vector<Loan> getLoans() const;
 };
 
 #endif
