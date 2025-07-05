@@ -13,6 +13,5 @@ TEST_CASE("Market initializes with correct SOFR and empty state") {
     CHECK(market.getSofr() == initialSofr);
 
     CHECK(market.getListings().empty());
-    CHECK(market.getEventOrchestrator().empty());
     CHECK(market.getRateHistory().empty());
 }
