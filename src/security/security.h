@@ -5,6 +5,10 @@
 #include <string>
 #include <vector>
 
+#include "common/dividend_bucket.h"
+#include "common/region.h"
+#include "common/sector.h"
+
 class Security {
    private:
     static constexpr int share_count = 1000;
@@ -15,9 +19,9 @@ class Security {
     double currentPrice;
     double profit;
 
-    std::string sector;          // TODO - This will be an enum
-    std::string region;          // TODO - This will be an enum
-    std::string dividendBucket;  // TODO - This will be an enum
+    Sector sector;
+    Region region;
+    DBucket dividendBucket;
 
     double debt;
     double growthBias;  // Secret
@@ -29,10 +33,9 @@ class Security {
 
    public:
     Security(std::string name, std::string ticker, double initialPrice,
-             double initialProfit, std::string sector, std::string region,
-             std::string dividendBucket, double initialDebt,
-             double baseBias = 0.0, double baseVol = 0.0,
-             double baseReputation = 0.0);
+             double initialProfit, Sector sector, Region region,
+             DBucket dividendBucket, double initialDebt, double baseBias = 0.0,
+             double baseVol = 0.0, double baseReputation = 0.0);
 
     std::string getName() const;
     std::string getTicker() const;
@@ -40,9 +43,9 @@ class Security {
     double getPrice() const;
     double getProfit() const;
 
-    std::string getSector() const;
-    std::string getRegion() const;
-    std::string getDividendBucket() const;
+    Sector getSector() const;
+    Region getRegion() const;
+    DBucket getDividendBucket() const;
 
     double getDebt() const;
     double getBias() const;

@@ -5,13 +5,14 @@
 #include <string>
 #include <vector>
 
+#include "security/security.h"
+
 class Player {
    private:
     std::string name;
 
     double cash;
-    std::map<std::string, int>
-        portfolio;  // TODO - this will be Security* => int
+    std::map<Security, int> portfolio;
     std::vector<std::string> activeLoans;  // TODO - this will be Loan
     int consecutiveDrawdownQuarters;
 
@@ -20,7 +21,7 @@ class Player {
 
     std::string getName() const;
     double getCash() const;
-    std::map<std::string, int> getPortfolio() const;
+    std::map<Security, int> getPortfolio() const;
     std::vector<std::string> getLoans() const;
 };
 
