@@ -5,6 +5,7 @@
 #include <vector>
 
 #include "../../dependencies/doctest/doctest.h"
+#include "utils/event_mocks.h"
 
 TEST_CASE("Event constructor") {
     std::string testName = "Economic Downturn";
@@ -16,26 +17,24 @@ TEST_CASE("Event constructor") {
     int testQBeforeTrigger = 2;
     std::vector<EventEffect> testEffectRules;
 
-    Event event(testName, testDescription, testTotalDuration, testResearchArea,
-                testResearchDifficulty, testInsights, testQBeforeTrigger,
-                testEffectRules);
+    Event e1 = getMockEvent();
 
-    CHECK(event.getName() == testName);
-    CHECK(event.getDescription() == testDescription);
-    CHECK(event.getTotalDurationQuarters() == testTotalDuration);
+    CHECK(e1.getName() == testName);
+    CHECK(e1.getDescription() == testDescription);
+    CHECK(e1.getTotalDurationQuarters() == testTotalDuration);
 
-    CHECK(event.getQuartersElapsed() == 0);
+    CHECK(e1.getQuartersElapsed() == 0);
 
-    CHECK(event.getResearchArea() == testResearchArea);
-    CHECK(event.getResearchDifficulty() == testResearchDifficulty);
+    CHECK(e1.getResearchArea() == testResearchArea);
+    CHECK(e1.getResearchDifficulty() == testResearchDifficulty);
 
-    CHECK(event.getResearchInsights().size() == testInsights.size());
+    CHECK(e1.getResearchInsights().size() == testInsights.size());
     if (!testInsights.empty()) {
-        CHECK(event.getResearchInsights()[0] == testInsights[0]);
+        CHECK(e1.getResearchInsights()[0] == testInsights[0]);
     }
 
-    CHECK(event.getQuartersBeforeTrigger() == testQBeforeTrigger);
-    CHECK(event.isActive());
+    CHECK(e1.getQuartersBeforeTrigger() == testQBeforeTrigger);
+    CHECK(e1.isActive());
 
-    CHECK(event.getEffectRules().empty());
+    CHECK(e1.getEffectRules().empty());
 }
