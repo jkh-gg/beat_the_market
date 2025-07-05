@@ -11,9 +11,9 @@ TEST_CASE("Security Constructor and Basic Getters") {
     double initialPrice = 100.50;
     double initialProfit = 10.25;
     double initialDebt = 5.00;
-    std::string sector = "Technology";
-    std::string region = "North America";
-    std::string dividendBucket = "Growth";
+    Sector sector = Sector::ENERGY;
+    Region region = Region::ASIA;
+    DBucket dividendBucket = DBucket::MEDIUM;
     double baseBias = 0.1;
     double baseVol = 0.05;
     double baseReputation = 0.9;
@@ -41,9 +41,9 @@ TEST_CASE("Security Constructor with Default Parameters") {
     double initialPrice = 50.0;
     double initialProfit = 5.0;
     double initialDebt = 2.0;
-    std::string sector = "Finance";
-    std::string region = "Europe";
-    std::string dividendBucket = "Value";
+    Sector sector = Sector::NONE;
+    Region region = Region::NONE;
+    DBucket dividendBucket = DBucket::NONE;
 
     Security security2(name, ticker, initialPrice, initialProfit, sector,
                        region, dividendBucket, initialDebt);
