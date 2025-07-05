@@ -15,14 +15,14 @@ class Security {
     double currentPrice;
     double profit;
 
+    std::string sector;          // TODO - This will be an enum
+    std::string region;          // TODO - This will be an enum
+    std::string dividendBucket;  // TODO - This will be an enum
+
     double debt;
     double growthBias;  // Secret
     double volatility;  // Secret
     double reputation;  // Secret
-
-    std::string sector;          // This will be an enum
-    std::string region;          // This will be an enum
-    std::string dividendBucket;  // This will be an enum
 
     std::vector<double> priceHistory;
     std::vector<double> profitHistory;
