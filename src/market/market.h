@@ -21,10 +21,10 @@ class Market {
    public:
     Market(std::default_random_engine &rng, double currentSofr);
 
-    std::vector<Security> getListings() const;
-    double getSofr() const;
-    std::string getEventOrchestrator() const;
-    std::vector<double> getRateHistory() const;
+    std::vector<Security> getListings() const { return listings; }
+    double getSofr() const { return currentSofr; }
+    std::string getEventOrchestrator() const { return eo; }
+    std::vector<double> getRateHistory() const { return interestRateHistory; }
 };
 
 #endif

@@ -37,23 +37,23 @@ class Security {
              DBucket dividendBucket, double initialDebt, double baseBias = 0.0,
              double baseVol = 0.0, double baseReputation = 0.0);
 
-    std::string getName() const;
-    std::string getTicker() const;
+    std::string getName() const { return name; }
+    std::string getTicker() const { return ticker; }
 
-    double getPrice() const;
-    double getProfit() const;
+    double getPrice() const { return currentPrice; }
+    double getProfit() const { return profit; }
 
-    Sector getSector() const;
-    Region getRegion() const;
-    DBucket getDividendBucket() const;
+    Sector getSector() const { return sector; }
+    Region getRegion() const { return region; }
+    DBucket getDividendBucket() const { return dividendBucket; }
 
-    double getDebt() const;
-    double getBias() const;
-    double getVol() const;
-    double getReputation() const;
+    double getDebt() const { return reputation; }
+    double getBias() const { return debt; }
+    double getVol() const { return growthBias; }
+    double getReputation() const { return volatility; }
 
-    std::vector<double> getPriceHistory() const;
-    std::vector<double> getProfitHistory() const;
+    std::vector<double> getPriceHistory() const { return priceHistory; }
+    std::vector<double> getProfitHistory() const { return profitHistory; }
 };
 
 #endif
