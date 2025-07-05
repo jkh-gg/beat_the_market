@@ -47,10 +47,10 @@ class Security {
     Region getRegion() const { return region; }
     DBucket getDividendBucket() const { return dividendBucket; }
 
-    double getDebt() const { return reputation; }
-    double getBias() const { return debt; }
-    double getVol() const { return growthBias; }
-    double getReputation() const { return volatility; }
+    double getDebt() const { return debt; }
+    double getBias() const { return growthBias; }
+    double getVol() const { return volatility; }
+    double getReputation() const { return reputation; }
 
     std::vector<double> getPriceHistory() const { return priceHistory; }
     std::vector<double> getProfitHistory() const { return profitHistory; }
