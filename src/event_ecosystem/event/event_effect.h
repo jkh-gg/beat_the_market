@@ -8,7 +8,6 @@
 #include "common/sector.h"
 
 struct EventEffect {
-   private:
     std::vector<Sector> targetSectors;
     std::vector<Region> targetRegions;
     std::vector<std::string> targetTickers;
@@ -21,8 +20,6 @@ struct EventEffect {
 
     double volatilityChangeInitial;
     double volatilityChangeEnd;
-
-   public:
 };
 
 #endif
