@@ -10,7 +10,7 @@ class Player {
     std::string name;
 
     double cash;
-    std::map<std::string, int> portfolio;  // this will be Stock* => int
+    std::map<std::string, int> portfolio;  // this will be Security* => int
     std::vector<std::string> activeLoans;  // this will be Loan
     int consecutiveDrawdownQuarters;
 
