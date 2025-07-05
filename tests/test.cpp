@@ -3,7 +3,9 @@
 
 // Test files included here:
 #include "test_events_ecosystem/event.test.cpp"
+#include "test_events_ecosystem/event_orchestrator.test.cpp"
 #include "test_loan/loan.test.cpp"
 #include "test_market/market.test.cpp"
 #include "test_player/player.test.cpp"
+#include "test_research_orchestrator/research_orchestrator.test.cpp"
 #include "test_security/security.test.cpp"
