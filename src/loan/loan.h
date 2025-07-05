@@ -16,14 +16,14 @@ class Loan {
     Loan(double principalAmount, double interestRate,
          double balloonPaymentAmount, double quarterlyPayment, int termLength);
 
-    double getPrincipalAmount() const;
-    double getOutstandingAmount() const;
-    double getInterestRate() const;
-    double getBalloonPaymentAmount() const;
-    int getTermLength() const;
-    int getRemainingTerm() const;
-    double getQuarterlyPayment() const;
-    bool isBalloonLoan() const;
+    double getPrincipalAmount() const { return principalAmount; }
+    double getOutstandingAmount() const { return outstandingAmount; }
+    double getInterestRate() const { return interestRate; }
+    double getBalloonPaymentAmount() const { return balloonPaymentAmount; }
+    int getTermLength() const { return termLength; }
+    int getRemainingTerm() const { return remainingTerm; }
+    double getQuarterlyPayment() const { return quarterlyPayment; }
+    bool isBalloonLoan() const { return balloonPaymentAmount == 0.0; }
 };
 
 #endif

@@ -15,21 +15,3 @@ Security::Security(std::string name, std::string ticker, double initialPrice,
       growthBias(baseBias),
       volatility(baseVol),
       reputation(baseReputation){};
-
-std::string Security::getName() const { return name; }
-std::string Security::getTicker() const { return ticker; }
-
-double Security::getPrice() const { return currentPrice; }
-double Security::getProfit() const { return profit; }
-
-double Security::getDebt() const { return debt; }
-double Security::getBias() const { return growthBias; }
-double Security::getVol() const { return volatility; }
-double Security::getReputation() const { return reputation; }
-
-Sector Security::getSector() const { return sector; }
-Region Security::getRegion() const { return region; }
-DBucket Security::getDividendBucket() const { return dividendBucket; }
-
-std::vector<double> Security::getPriceHistory() const { return priceHistory; }
-std::vector<double> Security::getProfitHistory() const { return profitHistory; }

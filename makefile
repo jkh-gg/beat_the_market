@@ -14,12 +14,12 @@ PROD_BIN_NAME := btm_release
 # Source File Discovery
 SRCS_BASE_DIR := src
 APP_MAIN_SRC := app.cpp
-LIB_SRCS := $(wildcard $(SRCS_BASE_DIR)/**/*.cpp)
+LIB_SRCS := $(shell find $(SRCS_BASE_DIR) -name "*.cpp")
 LIB_SRCS := $(filter-out $(APP_MAIN_SRC), $(LIB_SRCS))
 
 TEST_BASE_DIR := tests
 TEST_MAIN_SRC := tests/test.cpp
-INDIVIDUAL_TEST_SRCS := $(wildcard $(TEST_BASE_DIR)/**/*.cpp)
+INDIVIDUAL_TEST_SRCS := $(shell find $(TEST_BASE_DIR) -name "*.test.cpp")
 INDIVIDUAL_TEST_SRCS := $(filter-out $(TEST_MAIN_SRC), $(INDIVIDUAL_TEST_SRCS))
 
 
